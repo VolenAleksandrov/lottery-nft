@@ -89,10 +89,6 @@ declare module "hardhat/types/runtime" {
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.Factory__factory>;
     getContractFactory(
-      name: "Lock",
-      signerOrOptions?: ethers.Signer | FactoryOptions
-    ): Promise<Contracts.Lock__factory>;
-    getContractFactory(
       name: "LotteryNft",
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.LotteryNft__factory>;
@@ -101,17 +97,9 @@ declare module "hardhat/types/runtime" {
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.LotteryNftV2__factory>;
     getContractFactory(
-      name: "MetamorphicFactory",
+      name: "Proxy",
       signerOrOptions?: ethers.Signer | FactoryOptions
-    ): Promise<Contracts.MetamorphicFactory__factory>;
-    getContractFactory(
-      name: "UnstructuredProxy",
-      signerOrOptions?: ethers.Signer | FactoryOptions
-    ): Promise<Contracts.UnstructuredProxy__factory>;
-    getContractFactory(
-      name: "Token",
-      signerOrOptions?: ethers.Signer | FactoryOptions
-    ): Promise<Contracts.Token__factory>;
+    ): Promise<Contracts.Proxy__factory>;
 
     getContractAt(
       name: "OwnableUpgradeable",
@@ -209,11 +197,6 @@ declare module "hardhat/types/runtime" {
       signer?: ethers.Signer
     ): Promise<Contracts.Factory>;
     getContractAt(
-      name: "Lock",
-      address: string,
-      signer?: ethers.Signer
-    ): Promise<Contracts.Lock>;
-    getContractAt(
       name: "LotteryNft",
       address: string,
       signer?: ethers.Signer
@@ -224,20 +207,10 @@ declare module "hardhat/types/runtime" {
       signer?: ethers.Signer
     ): Promise<Contracts.LotteryNftV2>;
     getContractAt(
-      name: "MetamorphicFactory",
+      name: "Proxy",
       address: string,
       signer?: ethers.Signer
-    ): Promise<Contracts.MetamorphicFactory>;
-    getContractAt(
-      name: "UnstructuredProxy",
-      address: string,
-      signer?: ethers.Signer
-    ): Promise<Contracts.UnstructuredProxy>;
-    getContractAt(
-      name: "Token",
-      address: string,
-      signer?: ethers.Signer
-    ): Promise<Contracts.Token>;
+    ): Promise<Contracts.Proxy>;
 
     // default types
     getContractFactory(

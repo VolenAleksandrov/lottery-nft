@@ -2,8 +2,8 @@
   "_format": "hh-sol-cache-2",
   "files": {
     "D:\\Projects\\lottery-nft\\contracts\\Factory.sol": {
-      "lastModificationDate": 1661718073564,
-      "contentHash": "7bd338e4ce74e9e90442190e0b723686",
+      "lastModificationDate": 1662380223014,
+      "contentHash": "b73e1bf42a9ba4491cf5291f2b77fae9",
       "sourceName": "contracts/Factory.sol",
       "solcConfig": {
         "version": "0.8.11",
@@ -26,10 +26,15 @@
                 "ast"
               ]
             }
+          },
+          "metadata": {
+            "useLiteralContent": false
           }
         }
       },
-      "imports": [],
+      "imports": [
+        "./Proxy.sol"
+      ],
       "versionPragmas": [
         "^0.8.11"
       ],
@@ -37,10 +42,10 @@
         "Factory"
       ]
     },
-    "D:\\Projects\\lottery-nft\\contracts\\Lock.sol": {
-      "lastModificationDate": 1661581506515,
-      "contentHash": "6b2b4e5f78898e06c05af92d32436ca9",
-      "sourceName": "contracts/Lock.sol",
+    "D:\\Projects\\lottery-nft\\contracts\\Proxy.sol": {
+      "lastModificationDate": 1662380223014,
+      "contentHash": "7d1f918a14a75a08c229fe52520246d9",
+      "sourceName": "contracts/Proxy.sol",
       "solcConfig": {
         "version": "0.8.11",
         "settings": {
@@ -62,21 +67,22 @@
                 "ast"
               ]
             }
+          },
+          "metadata": {
+            "useLiteralContent": false
           }
         }
       },
-      "imports": [
-        "hardhat/console.sol"
-      ],
+      "imports": [],
       "versionPragmas": [
-        "^0.8.9"
+        "^0.8.11"
       ],
       "artifacts": [
-        "Lock"
+        "Proxy"
       ]
     },
     "D:\\Projects\\lottery-nft\\node_modules\\hardhat\\console.sol": {
-      "lastModificationDate": 1661812330659,
+      "lastModificationDate": 1662499171634,
       "contentHash": "4ff3cd2f6272c9a6516e9ee4f2b967d3",
       "sourceName": "hardhat/console.sol",
       "solcConfig": {
@@ -100,6 +106,9 @@
                 "ast"
               ]
             }
+          },
+          "metadata": {
+            "useLiteralContent": false
           }
         }
       },
@@ -112,8 +121,8 @@
       ]
     },
     "D:\\Projects\\lottery-nft\\contracts\\LotteryNftV2.sol": {
-      "lastModificationDate": 1661897711890,
-      "contentHash": "c346a77fc5af2d7fa856cf0e5c48a623",
+      "lastModificationDate": 1662498923331,
+      "contentHash": "879e33ad68b4a74cf670db4a43b695ef",
       "sourceName": "contracts/LotteryNftV2.sol",
       "solcConfig": {
         "version": "0.8.11",
@@ -136,6 +145,9 @@
                 "ast"
               ]
             }
+          },
+          "metadata": {
+            "useLiteralContent": false
           }
         }
       },
@@ -181,6 +193,9 @@
                 "ast"
               ]
             }
+          },
+          "metadata": {
+            "useLiteralContent": false
           }
         }
       },
@@ -219,6 +234,9 @@
                 "ast"
               ]
             }
+          },
+          "metadata": {
+            "useLiteralContent": false
           }
         }
       },
@@ -255,6 +273,9 @@
                 "ast"
               ]
             }
+          },
+          "metadata": {
+            "useLiteralContent": false
           }
         }
       },
@@ -293,6 +314,9 @@
                 "ast"
               ]
             }
+          },
+          "metadata": {
+            "useLiteralContent": false
           }
         }
       },
@@ -332,6 +356,9 @@
                 "ast"
               ]
             }
+          },
+          "metadata": {
+            "useLiteralContent": false
           }
         }
       },
@@ -371,6 +398,9 @@
                 "ast"
               ]
             }
+          },
+          "metadata": {
+            "useLiteralContent": false
           }
         }
       },
@@ -383,8 +413,8 @@
       ]
     },
     "D:\\Projects\\lottery-nft\\contracts\\LotteryNft.sol": {
-      "lastModificationDate": 1661900189890,
-      "contentHash": "5160ad5ea05b363461cbb197ebf3094f",
+      "lastModificationDate": 1662499400261,
+      "contentHash": "c93d8ca3e9303d889adcb2fd2004cb5b",
       "sourceName": "contracts/LotteryNft.sol",
       "solcConfig": {
         "version": "0.8.11",
@@ -407,6 +437,9 @@
                 "ast"
               ]
             }
+          },
+          "metadata": {
+            "useLiteralContent": false
           }
         }
       },
@@ -451,6 +484,9 @@
                 "ast"
               ]
             }
+          },
+          "metadata": {
+            "useLiteralContent": false
           }
         }
       },
@@ -487,6 +523,9 @@
                 "ast"
               ]
             }
+          },
+          "metadata": {
+            "useLiteralContent": false
           }
         }
       },
@@ -531,6 +570,9 @@
                 "ast"
               ]
             }
+          },
+          "metadata": {
+            "useLiteralContent": false
           }
         }
       },
@@ -569,6 +611,9 @@
                 "ast"
               ]
             }
+          },
+          "metadata": {
+            "useLiteralContent": false
           }
         }
       },
@@ -605,6 +650,9 @@
                 "ast"
               ]
             }
+          },
+          "metadata": {
+            "useLiteralContent": false
           }
         }
       },
@@ -643,6 +691,9 @@
                 "ast"
               ]
             }
+          },
+          "metadata": {
+            "useLiteralContent": false
           }
         }
       },
@@ -679,6 +730,9 @@
                 "ast"
               ]
             }
+          },
+          "metadata": {
+            "useLiteralContent": false
           }
         }
       },
@@ -715,6 +769,9 @@
                 "ast"
               ]
             }
+          },
+          "metadata": {
+            "useLiteralContent": false
           }
         }
       },
@@ -753,6 +810,9 @@
                 "ast"
               ]
             }
+          },
+          "metadata": {
+            "useLiteralContent": false
           }
         }
       },
@@ -789,6 +849,9 @@
                 "ast"
               ]
             }
+          },
+          "metadata": {
+            "useLiteralContent": false
           }
         }
       },
@@ -834,6 +897,9 @@
                 "ast"
               ]
             }
+          },
+          "metadata": {
+            "useLiteralContent": false
           }
         }
       },
@@ -872,6 +938,9 @@
                 "ast"
               ]
             }
+          },
+          "metadata": {
+            "useLiteralContent": false
           }
         }
       },
@@ -910,6 +979,9 @@
                 "ast"
               ]
             }
+          },
+          "metadata": {
+            "useLiteralContent": false
           }
         }
       },
@@ -946,6 +1018,9 @@
                 "ast"
               ]
             }
+          },
+          "metadata": {
+            "useLiteralContent": false
           }
         }
       },
@@ -984,6 +1059,9 @@
                 "ast"
               ]
             }
+          },
+          "metadata": {
+            "useLiteralContent": false
           }
         }
       },
@@ -1020,6 +1098,9 @@
                 "ast"
               ]
             }
+          },
+          "metadata": {
+            "useLiteralContent": false
           }
         }
       },
@@ -1058,6 +1139,9 @@
                 "ast"
               ]
             }
+          },
+          "metadata": {
+            "useLiteralContent": false
           }
         }
       },
@@ -1094,6 +1178,9 @@
                 "ast"
               ]
             }
+          },
+          "metadata": {
+            "useLiteralContent": false
           }
         }
       },
@@ -1133,6 +1220,9 @@
                 "ast"
               ]
             }
+          },
+          "metadata": {
+            "useLiteralContent": false
           }
         }
       },
@@ -1142,114 +1232,6 @@
       ],
       "artifacts": [
         "IERC165Upgradeable"
-      ]
-    },
-    "D:\\Projects\\lottery-nft\\contracts\\MetamorphicFactory.sol": {
-      "lastModificationDate": 1661808571090,
-      "contentHash": "bd854a0e062965d55717dee8058f7cf3",
-      "sourceName": "contracts/MetamorphicFactory.sol",
-      "solcConfig": {
-        "version": "0.8.11",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "storageLayout"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.11"
-      ],
-      "artifacts": [
-        "MetamorphicFactory"
-      ]
-    },
-    "D:\\Projects\\lottery-nft\\contracts\\Proxy.sol": {
-      "lastModificationDate": 1661892266151,
-      "contentHash": "6b1e80cd40dcc9cb54716568f3641768",
-      "sourceName": "contracts/Proxy.sol",
-      "solcConfig": {
-        "version": "0.8.11",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "storageLayout"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.11"
-      ],
-      "artifacts": [
-        "UnstructuredProxy"
-      ]
-    },
-    "D:\\Projects\\lottery-nft\\contracts\\Token.sol": {
-      "lastModificationDate": 1661812449284,
-      "contentHash": "d32614fd4c0d1189b34e13ca26580e73",
-      "sourceName": "contracts/Token.sol",
-      "solcConfig": {
-        "version": "0.8.11",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "storageLayout"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.9"
-      ],
-      "artifacts": [
-        "Token"
       ]
     }
   }

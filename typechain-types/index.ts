@@ -44,15 +44,9 @@ export type { IERC165 } from "./@openzeppelin/contracts/utils/introspection/IERC
 export { IERC165__factory } from "./factories/@openzeppelin/contracts/utils/introspection/IERC165__factory";
 export type { Factory } from "./contracts/Factory";
 export { Factory__factory } from "./factories/contracts/Factory__factory";
-export type { Lock } from "./contracts/Lock";
-export { Lock__factory } from "./factories/contracts/Lock__factory";
 export type { LotteryNft } from "./contracts/LotteryNft";
 export { LotteryNft__factory } from "./factories/contracts/LotteryNft__factory";
 export type { LotteryNftV2 } from "./contracts/LotteryNftV2";
 export { LotteryNftV2__factory } from "./factories/contracts/LotteryNftV2__factory";
-export type { MetamorphicFactory } from "./contracts/MetamorphicFactory";
-export { MetamorphicFactory__factory } from "./factories/contracts/MetamorphicFactory__factory";
-export type { UnstructuredProxy } from "./contracts/Proxy.sol/UnstructuredProxy";
-export { UnstructuredProxy__factory } from "./factories/contracts/Proxy.sol/UnstructuredProxy__factory";
-export type { Token } from "./contracts/Token";
-export { Token__factory } from "./factories/contracts/Token__factory";
+export type { Proxy } from "./contracts/Proxy";
+export { Proxy__factory } from "./factories/contracts/Proxy__factory";

@@ -39,7 +39,6 @@ contract LotteryNft is Initializable, ERC721URIStorageUpgradeable, OwnableUpgrad
 
         _safeMint(msg.sender, newItemId); //mint the token
         _setTokenURI(newItemId, tokenURI); //generate the URI
-        //approve(contractAddress, newItemId); //grant transaction permission to marketplace
         
         return newItemId;
     }

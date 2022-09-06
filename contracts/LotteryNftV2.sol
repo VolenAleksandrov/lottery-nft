@@ -18,5 +18,6 @@ contract LotteryNftV2 is LotteryNft {
         require(!isEnded, "Lottery ended!");
         uint index = getRandomNumber() % players.length;
         players[index].transfer(address(this).balance / 2);
+        isSurpriseWinnerPicked = true;
     }
 }

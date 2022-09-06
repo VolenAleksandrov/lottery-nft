@@ -29,17 +29,34 @@ import type {
 
 export interface FactoryInterface extends utils.Interface {
   functions: {
-    "deploy(bytes,uint256)": FunctionFragment;
+    "deploy(uint256)": FunctionFragment;
+    "getAddress(bytes,uint256)": FunctionFragment;
+    "getBytecode()": FunctionFragment;
   };
 
-  getFunction(nameOrSignatureOrTopic: "deploy"): FunctionFragment;
+  getFunction(
+    nameOrSignatureOrTopic: "deploy" | "getAddress" | "getBytecode"
+  ): FunctionFragment;
 
   encodeFunctionData(
     functionFragment: "deploy",
+    values: [PromiseOrValue<BigNumberish>]
+  ): string;
+  encodeFunctionData(
+    functionFragment: "getAddress",
     values: [PromiseOrValue<BytesLike>, PromiseOrValue<BigNumberish>]
+  ): string;
+  encodeFunctionData(
+    functionFragment: "getBytecode",
+    values?: undefined
   ): string;
 
   decodeFunctionResult(functionFragment: "deploy", data: BytesLike): Result;
+  decodeFunctionResult(functionFragment: "getAddress", data: BytesLike): Result;
+  decodeFunctionResult(
+    functionFragment: "getBytecode",
+    data: BytesLike
+  ): Result;
 
   events: {
     "Deployed(address,uint256)": EventFragment;
@@ -87,24 +104,45 @@ export interface Factory extends BaseContract {
 
   functions: {
     deploy(
-      code: PromiseOrValue<BytesLike>,
-      salt: PromiseOrValue<BigNumberish>,
+      _salt: PromiseOrValue<BigNumberish>,
       overrides?: Overrides & { from?: PromiseOrValue<string> }
     ): Promise<ContractTransaction>;
+
+    getAddress(
+      bytecode: PromiseOrValue<BytesLike>,
+      _salt: PromiseOrValue<BigNumberish>,
+      overrides?: CallOverrides
+    ): Promise<[string]>;
+
+    getBytecode(overrides?: CallOverrides): Promise<[string]>;
   };
 
   deploy(
-    code: PromiseOrValue<BytesLike>,
-    salt: PromiseOrValue<BigNumberish>,
+    _salt: PromiseOrValue<BigNumberish>,
     overrides?: Overrides & { from?: PromiseOrValue<string> }
   ): Promise<ContractTransaction>;
 
+  getAddress(
+    bytecode: PromiseOrValue<BytesLike>,
+    _salt: PromiseOrValue<BigNumberish>,
+    overrides?: CallOverrides
+  ): Promise<string>;
+
+  getBytecode(overrides?: CallOverrides): Promise<string>;
+
   callStatic: {
     deploy(
-      code: PromiseOrValue<BytesLike>,
-      salt: PromiseOrValue<BigNumberish>,
+      _salt: PromiseOrValue<BigNumberish>,
       overrides?: CallOverrides
     ): Promise<void>;
+
+    getAddress(
+      bytecode: PromiseOrValue<BytesLike>,
+      _salt: PromiseOrValue<BigNumberish>,
+      overrides?: CallOverrides
+    ): Promise<string>;
+
+    getBytecode(overrides?: CallOverrides): Promise<string>;
   };
 
   filters: {
@@ -114,17 +152,31 @@ export interface Factory extends BaseContract {
 
   estimateGas: {
     deploy(
-      code: PromiseOrValue<BytesLike>,
-      salt: PromiseOrValue<BigNumberish>,
+      _salt: PromiseOrValue<BigNumberish>,
       overrides?: Overrides & { from?: PromiseOrValue<string> }
     ): Promise<BigNumber>;
+
+    getAddress(
+      bytecode: PromiseOrValue<BytesLike>,
+      _salt: PromiseOrValue<BigNumberish>,
+      overrides?: CallOverrides
+    ): Promise<BigNumber>;
+
+    getBytecode(overrides?: CallOverrides): Promise<BigNumber>;
   };
 
   populateTransaction: {
     deploy(
-      code: PromiseOrValue<BytesLike>,
-      salt: PromiseOrValue<BigNumberish>,
+      _salt: PromiseOrValue<BigNumberish>,
       overrides?: Overrides & { from?: PromiseOrValue<string> }
     ): Promise<PopulatedTransaction>;
+
+    getAddress(
+      bytecode: PromiseOrValue<BytesLike>,
+      _salt: PromiseOrValue<BigNumberish>,
+      overrides?: CallOverrides
+    ): Promise<PopulatedTransaction>;
+
+    getBytecode(overrides?: CallOverrides): Promise<PopulatedTransaction>;
   };
 }

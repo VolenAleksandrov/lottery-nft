@@ -1,16 +1,14 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.11;
 
-contract UnstructuredProxy {
-    bytes32 private constant ownerPosition = bytes32(uint256(
-    keccak256('eip1967.proxy.owner')) - 1
-    );
+contract Proxy {
+    bytes32 private constant ownerPosition =
+        bytes32(uint256(keccak256("eip1967.proxy.owner")) - 1);
 
-    bytes32 private constant implementationPosition = bytes32(uint256(
-    keccak256('eip1967.proxy.implementation')) - 1
-    );
+    bytes32 private constant implementationPosition =
+        bytes32(uint256(keccak256("eip1967.proxy.implementation")) - 1);
 
-    function getImplementationAddress() public view returns(address impl){
+    function getImplementationAddress() public view returns (address impl) {
         bytes32 _implementationPosition = implementationPosition;
         assembly {
             impl := sload(_implementationPosition)
@@ -24,7 +22,7 @@ contract UnstructuredProxy {
         }
     }
 
-    function getOwnerAddress() external view returns(address ownr){
+    function getOwnerAddress() external view returns (address ownr) {
         bytes32 _ownerPosition = ownerPosition;
         assembly {
             ownr := sload(_ownerPosition)
@@ -41,7 +39,7 @@ contract UnstructuredProxy {
     fallback() external payable {
         address implementation = getImplementationAddress();
         assembly {
-            let ptr:=mload(0x40)
+            let ptr := mload(0x40)
             calldatacopy(ptr, 0, calldatasize())
             let result := delegatecall(
                 gas(),
@@ -53,8 +51,12 @@ contract UnstructuredProxy {
             )
             returndatacopy(ptr, 0, returndatasize())
             switch result
-            case 0 { revert(ptr, returndatasize()) }
-            default { return(ptr, returndatasize()) }
+            case 0 {
+                revert(ptr, returndatasize())
+            }
+            default {
+                return(ptr, returndatasize())
+            }
         }
     }
 
